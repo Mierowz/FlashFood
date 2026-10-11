@@ -1,0 +1,3379 @@
+/* ========================================================================== */
+/* FOUNDATION & THEME */
+/* ========================================================================== */
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap");
+:root {
+    --orange: #ffbd55;
+    --orange2: #ffad3f;
+    --cream: #ffffff;
+    --ink: #29272b;
+    --muted: #77757d;
+    --card: #fff;
+    --line: #e9e8ee;
+    --green: #39a96b;
+    --red: #e35c50;
+    --shadow: 0 8px 30px rgba(36,31,25,.08);
+}
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    background: var(--cream);
+    color: var(--ink);
+    font-family: Nunito,system-ui,sans-serif;
+}
+
+/* ========================================================================== */
+/* APP SHELL & HEADER */
+/* ========================================================================== */
+.app-shell {
+    min-height: 100vh;
+    max-width: 1040px;
+    margin: auto;
+    background: var(--cream);
+    box-shadow: 0 0 50px rgba(0,0,0,.08);
+    position: relative;
+}
+.topbar {
+    height: 64px;
+    background: var(--orange);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 22px;
+    position: sticky;
+    top: 0;
+    z-index: 20;
+}
+.brand {
+    border: 0;
+    background: transparent;
+    font-size: 25px;
+    font-weight: 800;
+    color: #8d3b19;
+    cursor: pointer;
+}
+.bolt {
+    font-size: 21px;
+    margin-right: 2px;
+}
+.top-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.time {
+    font-weight: 700;
+}
+.icon-btn,.avatar-btn {
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+    position: relative;
+}
+.icon-btn {
+    font-size: 23px;
+}
+.icon-btn b {
+    position: absolute;
+    background: #a84a25;
+    color: white;
+    border-radius: 99px;
+    font-size: 10px;
+    min-width: 16px;
+    padding: 2px;
+    top: -4px;
+    right: -5px;
+}
+.avatar-btn img {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid white;
+}
+.main {
+    min-height: calc(100vh - 128px);
+}
+
+/* ========================================================================== */
+/* MISCELLANEOUS */
+/* ========================================================================== */
+.screen {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 24px 28px 110px;
+}
+
+/* ========================================================================== */
+/* HOME & HERO */
+/* ========================================================================== */
+.hero {
+    background: var(--orange);
+    border-radius: 0 0 20px 20px;
+    padding: 18px 18px 20px;
+    position: relative;
+    min-height: 176px;
+}
+.hero-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #fff;
+}
+.profile-pic {
+    width: 62px;
+    height: 62px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid rgba(255,255,255,.8);
+}
+.welcome {
+    font-size: 15px;
+}
+.hero strong {
+    font-size: 18px;
+}
+.status {
+    font-size: 13px;
+    margin-top: 1px;
+}
+.crest {
+    position: absolute;
+    right: 22px;
+    top: 22px;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.details {
+    color: #fff;
+    font-size: 13px;
+    line-height: 1.55;
+    margin-top: 13px;
+    max-width: 520px;
+}
+
+/* ========================================================================== */
+/* HOME CONTENT & FRIENDS */
+/* ========================================================================== */
+.balance-card {
+    background: #fff;
+    margin: 18px 0 6px;
+    border-radius: 10px;
+    padding: 14px 18px;
+    box-shadow: var(--shadow);
+}
+.balance-card h3,.section-title {
+    margin: 0 0 10px;
+    text-align: center;
+}
+.balance-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    align-items: center;
+}
+.progress {
+    height: 12px;
+    width: 170px;
+    border: 1px solid #4b4b4b;
+    border-radius: 10px;
+    overflow: hidden;
+    background: #f7f7f7;
+}
+.progress span {
+    display: block;
+    height: 100%;
+    background: var(--orange);
+    border-radius: 10px;
+}
+.balance-row small {
+    display: block;
+    color: #8c8990;
+    font-size: 11px;
+}
+.money {
+    text-align: right;
+    color: #8c8990;
+    font-size: 11px;
+}
+.money strong {
+    display: block;
+    color: #555;
+    font-size: 13px;
+}
+
+/* ========================================================================== */
+/* MISCELLANEOUS */
+/* ========================================================================== */
+.section-title {
+    font-size: 17px;
+}
+
+/* ========================================================================== */
+/* HOME CONTENT & FRIENDS */
+/* ========================================================================== */
+.friends {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background: #fff;
+    border-radius: 10px;
+    padding: 12px;
+    gap: 12px;
+}
+.friend {
+    display: grid;
+    grid-template-columns: 44px 1fr;
+    align-items: center;
+    column-gap: 8px;
+    font-size: 12px;
+}
+.friend-avatar,.friend img {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    object-fit: cover;
+    grid-row: span 2;
+}
+.friend small {
+    color: #999;
+}
+.canteen-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 16px;
+}
+.canteen-heading h3 {
+    margin: 0;
+    font-size: 16px;
+}
+.crowd-chip {
+    border: 0;
+    background: transparent;
+    font: inherit;
+    font-weight: 800;
+    cursor: pointer;
+}
+.food-row {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 10px;
+    background: #fff;
+    border-radius: 9px;
+    padding: 12px;
+}
+.food-circle {
+    border: 0;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+    padding: 0;
+}
+.food-circle img {
+    width: 70px;
+    height: 70px;
+    max-width: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.food-circle span {
+    position: absolute;
+    bottom: 0;
+    right: 20%;
+    font-size: 15px;
+    color: #f2b400;
+}
+.ai-card {
+    margin-top: 18px;
+    background: #fff7e8;
+    border: 1px solid #ffd68d;
+    border-radius: 14px;
+    padding: 16px;
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    align-items: center;
+}
+.ai-badge {
+    display: inline-block;
+    background: #ffe0a7;
+    color: #9a5c13;
+    border-radius: 5px;
+    padding: 3px 7px;
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: .5px;
+}
+.ai-card h3 {
+    margin: 7px 0 3px;
+}
+.ai-card p {
+    margin: 0;
+    color: #68656b;
+    font-size: 13px;
+}
+.ai-score {
+    font-size: 34px;
+    font-weight: 800;
+    color: #bd6e19;
+    white-space: nowrap;
+}
+.ai-score small {
+    font-size: 14px;
+}
+
+/* ========================================================================== */
+/* RECOMMENDATIONS & FOOD CARDS */
+/* ========================================================================== */
+.section-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.section-head button {
+    border: 0;
+    background: transparent;
+    color: #a55c13;
+    font-weight: 800;
+    cursor: pointer;
+}
+.recommend {
+    margin-top: 20px;
+}
+.recommend h3 {
+    margin: 0;
+}
+.recommend-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-top: 10px;
+}
+.recommend-grid.two {
+    grid-template-columns: repeat(2,1fr);
+}
+.mini-food {
+    background: #fff;
+    border-radius: 12px;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 58px 1fr 30px;
+    gap: 9px;
+    align-items: center;
+}
+.mini-food img {
+    width: 58px;
+    height: 58px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+.mini-food b,.mini-food span {
+    display: block;
+    font-size: 12px;
+}
+.mini-food span {
+    color: #8a878e;
+    margin-top: 3px;
+}
+.mini-food button {
+    border: 0;
+    background: var(--orange);
+    width: 28px;
+    height: 28px;
+    border-radius: 8px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+/* ========================================================================== */
+/* BOTTOM NAVIGATION */
+/* ========================================================================== */
+.bottom {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transform: none;
+    width: 100%;
+    height: 64px;
+    background: var(--orange);
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    z-index: 20;
+    padding: 0 max(0px, calc((100vw - 760px) / 2));
+}
+.bottom button {
+    flex: 1 1 0;
+    max-width: 180px;
+    min-width: 0;
+    border: 0;
+    background: transparent;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+    cursor: pointer;
+    font-size: 19px;
+}
+.bottom span {
+    font-size: 10px;
+}
+.bottom button.active {
+    background: rgba(255,255,255,.12);
+}
+
+/* ========================================================================== */
+/* MENU & NAVIGATION */
+/* ========================================================================== */
+.page-head {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 18px;
+}
+.page-head h2 {
+    margin: 0;
+    font-size: 22px;
+}
+.back {
+    border: 0;
+    background: #fff;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    font-size: 22px;
+    cursor: pointer;
+}
+.tabs {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 8px;
+    margin-bottom: 18px;
+}
+.tabs button {
+    border: 0;
+    background: var(--orange);
+    border-radius: 6px;
+    padding: 10px 5px;
+    font: inherit;
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+}
+.tabs button.active {
+    background: #f19d30;
+    color: white;
+}
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 16px;
+}
+.menu-item {
+    border: 0;
+    background: #fff;
+    border-radius: 13px;
+    padding: 9px;
+    text-align: left;
+    cursor: pointer;
+    box-shadow: var(--shadow);
+}
+.menu-item img {
+    width: 100%;
+    aspect-ratio: 1;
+    border-radius: 10px;
+    object-fit: cover;
+}
+.menu-name {
+    font-weight: 800;
+    font-size: 13px;
+    margin-top: 8px;
+}
+.price {
+    display: inline-block;
+    background: var(--orange);
+    border-radius: 5px;
+    padding: 3px 7px;
+    font-size: 12px;
+    margin-top: 5px;
+}
+.menu-item small {
+    display: block;
+    color: #888;
+    margin-top: 4px;
+}
+
+/* ========================================================================== */
+/* ITEM DETAILS & ACTIONS */
+/* ========================================================================== */
+.item-card,.checkout-card,.send-card,.parent-banner {
+    background: #fff;
+    border-radius: 16px;
+    padding: 16px;
+    box-shadow: var(--shadow);
+}
+.item-img {
+    width: 100%;
+    max-height: 380px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+.item-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 14px;
+}
+.item-title h2 {
+    margin: 0;
+}
+.item-title span {
+    font-weight: 800;
+    background: var(--orange);
+    padding: 7px 10px;
+    border-radius: 7px;
+}
+.tag {
+    display: inline-block;
+    margin-top: 8px;
+    color: #8d5a20;
+    background: #fff0d5;
+    padding: 4px 8px;
+    border-radius: 6px;
+    font-size: 11px;
+}
+.item-card p {
+    color: #666;
+}
+.allergen {
+    background: #f4f5f8;
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    margin: 14px 0;
+}
+.allergen span {
+    color: #7c7880;
+}
+.primary {
+    border: 0;
+    background: var(--orange2);
+    color: #2d251e;
+    border-radius: 8px;
+    padding: 12px 18px;
+    font: inherit;
+    font-weight: 800;
+    cursor: pointer;
+}
+.wide {
+    width: 100%;
+}
+.special {
+    margin-top: 12px;
+    background: var(--orange);
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 12px;
+}
+
+/* ========================================================================== */
+/* CART & CHECKOUT */
+/* ========================================================================== */
+.cart-list {
+    display: grid;
+    gap: 10px;
+}
+.cart-row,.history-row,.restriction-row {
+    background: #fff;
+    border-radius: 12px;
+    padding: 10px;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 58px 1fr auto auto;
+    gap: 12px;
+}
+.cart-row img,.history-row img,.restriction-row img {
+    width: 58px;
+    height: 58px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.cart-row small,.history-row small,.restriction-row small {
+    display: block;
+    color: #888;
+    margin-top: 3px;
+}
+.cart-row button {
+    border: 0;
+    background: #eee;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.total-card {
+    background: #fff;
+    padding: 16px;
+    border-radius: 12px;
+    margin: 14px 0;
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+}
+.choice-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+.choice-row button,.methods button {
+    border: 2px solid var(--line);
+    background: #fff;
+    border-radius: 10px;
+    padding: 13px;
+    text-align: left;
+    font: inherit;
+    cursor: pointer;
+}
+.choice-row button.selected,.methods button.selected {
+    border-color: var(--orange2);
+    background: #fff7e9;
+}
+.choice-row span,.methods span {
+    display: block;
+    font-size: 12px;
+    color: #888;
+    margin-top: 4px;
+}
+.checkout-card h3 {
+    margin-top: 4px;
+}
+.methods {
+    display: grid;
+    gap: 8px;
+}
+.order-summary {
+    display: flex;
+    justify-content: space-between;
+    margin: 18px 0;
+    padding: 14px;
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+}
+
+/* ========================================================================== */
+/* ORDERS, HISTORY & RESTRICTIONS */
+/* ========================================================================== */
+.success {
+    text-align: center;
+    padding-top: 50px;
+}
+.success-icon {
+    width: 68px;
+    height: 68px;
+    border-radius: 50%;
+    background: #d9f6e5;
+    color: var(--green);
+    display: grid;
+    place-items: center;
+    font-size: 38px;
+    margin: 0 auto 16px;
+}
+.success h1 {
+    margin-bottom: 6px;
+}
+.success p {
+    color: #888;
+}
+.receipt {
+    background: #fff;
+    border-radius: 14px;
+    padding: 8px 16px;
+    text-align: left;
+    margin: 22px 0;
+}
+.receipt div {
+    display: flex;
+    justify-content: space-between;
+    padding: 11px 0;
+    border-bottom: 1px solid var(--line);
+    font-size: 13px;
+}
+.receipt div:last-child {
+    border-bottom: 0;
+}
+.receipt strong {
+    font-weight: 800;
+}
+.pickup-card {
+    background: #fff7e8;
+    border-radius: 12px;
+    padding: 14px;
+    text-align: left;
+    margin-bottom: 16px;
+}
+.pickup-card span {
+    display: block;
+    color: #777;
+    font-size: 12px;
+    margin-top: 4px;
+}
+.total-purchases {
+    display: inline-block;
+    background: var(--orange);
+    border-radius: 6px;
+    padding: 7px 12px;
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+.history-list,.restriction-list {
+    display: grid;
+    gap: 7px;
+}
+.history-row {
+    grid-template-columns: 68px 1fr auto;
+    position: relative;
+}
+.history-row img {
+    width: 68px;
+    height: 68px;
+}
+.history-row button {
+    grid-column: 1/2;
+    border: 0;
+    background: var(--orange);
+    border-radius: 6px;
+    font-size: 11px;
+    padding: 4px;
+}
+.history-tabs button {
+    font-size: 10px;
+}
+
+/* ========================================================================== */
+/* CANTEEN MAP */
+/* ========================================================================== */
+.map-card {
+    background: #fff;
+    border-radius: 16px;
+    padding: 18px;
+}
+.map-grid {
+    height: 400px;
+    background: #e7e9df;
+    border-radius: 12px;
+    display: grid;
+    grid-template-columns: 1fr 1.5fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 10px;
+    padding: 15px;
+    background-image: linear-gradient(90deg,transparent 48%,#d1d4c7 49%,#d1d4c7 51%,transparent 52%),linear-gradient(0deg,transparent 48%,#d1d4c7 49%,#d1d4c7 51%,transparent 52%);
+}
+.map-place {
+    background: #fff;
+    border-radius: 8px;
+    padding: 12px;
+    box-shadow: 0 3px 10px rgba(0,0,0,.06);
+    font-size: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.map-place span {
+    color: var(--orange2);
+    font-size: 24px;
+}
+
+/* ========================================================================== */
+/* MISCELLANEOUS */
+/* ========================================================================== */
+.p1 {
+    grid-column: 2;
+}
+.p3 {
+    grid-column: 2;
+}
+
+/* ========================================================================== */
+/* CANTEEN MAP */
+/* ========================================================================== */
+.map-info {
+    background: #fff;
+    border-radius: 12px;
+    padding: 14px;
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+}
+.map-info small {
+    grid-column: 1/-1;
+    color: #888;
+    margin-top: 3px;
+}
+
+/* ========================================================================== */
+/* PROFILE, PARENT & NETWORK */
+/* ========================================================================== */
+.school-card {
+    background: #fff;
+    border-radius: 14px;
+    padding: 14px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 10px;
+}
+.school-card img {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.school-card b,.school-card span {
+    display: block;
+}
+.school-card span {
+    font-size: 12px;
+    color: #888;
+}
+.school-card strong {
+    margin-left: auto;
+    color: var(--green);
+}
+
+/* ========================================================================== */
+/* MISCELLANEOUS */
+/* ========================================================================== */
+.school-placeholder {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: #f0f0f4;
+    display: grid;
+    place-items: center;
+    font-size: 25px;
+    color: #888;
+}
+
+/* ========================================================================== */
+/* PROFILE, PARENT & NETWORK */
+/* ========================================================================== */
+.profile-stats {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 8px;
+    margin: 14px 0;
+}
+.profile-stats div {
+    background: #fff;
+    border-radius: 12px;
+    text-align: center;
+    padding: 12px;
+}
+.profile-stats b,.profile-stats span {
+    display: block;
+}
+.profile-stats span {
+    font-size: 11px;
+    color: #888;
+}
+.setting-row {
+    background: #fff;
+    padding: 15px;
+    border-bottom: 1px solid var(--line);
+    display: flex;
+    justify-content: space-between;
+}
+.setting-row span {
+    color: #888;
+}
+.parent-banner {
+    background: linear-gradient(135deg,#fff7e7,#fff);
+    margin-bottom: 14px;
+}
+.parent-banner h2 {
+    margin: 8px 0 4px;
+}
+.parent-banner p {
+    margin: 0;
+    color: #777;
+}
+.parent-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+.parent-grid button {
+    border: 0;
+    background: #fff;
+    border-radius: 12px;
+    padding: 16px;
+    text-align: left;
+    cursor: pointer;
+    box-shadow: var(--shadow);
+}
+.parent-grid b,.parent-grid span {
+    display: block;
+}
+.parent-grid span {
+    color: #888;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+/* ========================================================================== */
+/* ORDERS, HISTORY & RESTRICTIONS */
+/* ========================================================================== */
+.restriction-row {
+    grid-template-columns: 55px 1fr auto;
+}
+.restriction-row button {
+    border: 0;
+    background: #eee;
+    border-radius: 7px;
+    padding: 7px 10px;
+    cursor: pointer;
+}
+.restriction-row button.on {
+    background: #ffd2cd;
+    color: #a33;
+}
+
+/* ========================================================================== */
+/* MESSAGES & ACCOUNT ACTIONS */
+/* ========================================================================== */
+.send-card {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+.send-card img {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.send-card span {
+    display: block;
+    color: #888;
+    font-size: 12px;
+    margin-top: 3px;
+}
+.toast {
+    position: fixed;
+    left: 50%;
+    bottom: 82px;
+    transform: translateX(-50%);
+    background: #2c2b2f;
+    color: #fff;
+    padding: 10px 16px;
+    border-radius: 999px;
+    font-size: 13px;
+    z-index: 50;
+    box-shadow: var(--shadow);
+}
+.logout {
+    position: fixed;
+    top: 18px;
+    left: 18px;
+    border: 0;
+    background: rgba(255,255,255,.25);
+    border-radius: 8px;
+    padding: 7px 10px;
+    font-size: 11px;
+    cursor: pointer;
+    z-index: 30;
+}
+
+/* ========================================================================== */
+/* LOGIN & ACCOUNT SELECTION */
+/* ========================================================================== */
+.login-page {
+    min-height: 100vh;
+    background: linear-gradient(135deg,#ffbd55,#ffe0a1);
+    display: grid;
+    place-items: center;
+    padding: 20px;
+}
+.login-card {
+    background: #fff;
+    width: min(470px,100%);
+    border-radius: 24px;
+    padding: 32px;
+    box-shadow: 0 20px 60px rgba(70,45,10,.2);
+}
+.login-logo {
+    font-size: 27px;
+    font-weight: 900;
+    color: #a94e1b;
+}
+
+/* ========================================================================== */
+/* MISCELLANEOUS */
+/* ========================================================================== */
+.eyebrow {
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    color: #9a6a32;
+    font-weight: 800;
+    margin-top: 28px;
+}
+
+/* ========================================================================== */
+/* LOGIN & ACCOUNT SELECTION */
+/* ========================================================================== */
+.login-card h1 {
+    font-size: 42px;
+    line-height: 1.02;
+    margin: 10px 0;
+}
+
+/* ========================================================================== */
+/* MISCELLANEOUS */
+/* ========================================================================== */
+.muted {
+    color: #7e7b83;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+/* ========================================================================== */
+/* LOGIN & ACCOUNT SELECTION */
+/* ========================================================================== */
+.login-card label {
+    display: block;
+    font-size: 12px;
+    font-weight: 800;
+    margin: 16px 0 6px;
+}
+.login-card input {
+    width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 9px;
+    padding: 12px;
+    font: inherit;
+}
+.role-switch {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+}
+.role-switch button {
+    border: 1px solid #ddd;
+    background: #fff;
+    border-radius: 9px;
+    padding: 10px;
+    font: inherit;
+    cursor: pointer;
+}
+.role-switch button.active {
+    background: #fff0d5;
+    border-color: var(--orange2);
+    font-weight: 800;
+}
+.login-note {
+    font-size: 10px;
+    color: #999;
+    text-align: center;
+    margin: 14px 0 0;
+}
+
+/* ========================================================================== */
+/* MISCELLANEOUS */
+/* ========================================================================== */
+.empty {
+    text-align: center;
+    padding: 80px 0;
+    color: #888;
+}
+.empty div {
+    font-size: 50px;
+}
+.empty h3 {
+    color: #444;
+}
+
+/* ========================================================================== */
+/* RESPONSIVE DESIGN */
+/* ========================================================================== */
+@media (min-width:900px) {
+    .app-shell {
+        min-height: 100vh;
+    }
+    .main {
+        padding: 0 70px;
+    }
+    .hero {
+        margin: 0 -20px;
+    }
+    .bottom {
+        border-radius: 18px 18px 0 0;
+    }
+    .logout {
+        left: calc(50% - 500px);
+    }
+}
+@media (max-width:600px) {
+    body {
+        background: var(--cream);
+    }
+    .app-shell {
+        width: 100%;
+    }
+    .screen {
+        padding: 18px 14px 100px;
+    }
+    .topbar {
+        padding: 0 12px;
+        height: 58px;
+    }
+    .brand {
+        font-size: 21px;
+    }
+    .logout {
+        display: none;
+    }
+    .hero {
+        margin: 0 -14px;
+        border-radius: 0 0 18px 18px;
+        padding: 16px 14px;
+    }
+    .menu-grid {
+        grid-template-columns: repeat(2,1fr);
+    }
+    .food-circle img {
+        width: 64px;
+        height: 64px;
+    }
+    .friends {
+        gap: 4px;
+    }
+    .recommend-grid {
+        grid-template-columns: 1fr;
+    }
+    .recommend-grid.two {
+        grid-template-columns: 1fr 1fr;
+    }
+    .balance-row {
+        gap: 10px;
+    }
+    .progress {
+        width: 140px;
+    }
+    .map-grid {
+        height: 340px;
+    }
+    .login-card {
+        padding: 25px;
+    }
+    .login-card h1 {
+        font-size: 35px;
+    }
+}
+
+/* ========================================================================== */
+/* LOGIN & ACCOUNT SELECTION */
+/* ========================================================================== */
+.account-select {
+    width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 9px;
+    padding: 12px;
+    font: inherit;
+    background: #fff;
+}
+.reset-demo {
+    border: 0;
+    background: transparent;
+    color: #8b6b42;
+    font: inherit;
+    font-size: 11px;
+    text-decoration: underline;
+    cursor: pointer;
+    display: block;
+    margin: 12px auto 0;
+}
+
+/* ========================================================================== */
+/* HOME CONTENT & FRIENDS */
+/* ========================================================================== */
+.canteen-filter {
+    display: flex;
+    gap: 7px;
+    margin: -5px 0 10px;
+}
+.canteen-filter button {
+    border: 1px solid var(--line);
+    background: #fff;
+    border-radius: 999px;
+    padding: 7px 12px;
+    font: inherit;
+    font-size: 11px;
+    cursor: pointer;
+}
+.canteen-filter button.active {
+    background: var(--orange);
+    border-color: var(--orange);
+}
+
+/* ========================================================================== */
+/* FOOD SAFETY & PREFERENCES */
+/* ========================================================================== */
+.favorite-note {
+    font-size: 11px;
+    color: #8a6a39;
+    margin: 0 0 12px;
+}
+
+/* ========================================================================== */
+/* MENU & NAVIGATION */
+/* ========================================================================== */
+.menu-image-wrap {
+    position: relative;
+}
+
+/* ========================================================================== */
+/* FOOD SAFETY & PREFERENCES */
+/* ========================================================================== */
+.favorite-badge,.blocked-badge {
+    position: absolute;
+    left: 7px;
+    top: 7px;
+    border-radius: 999px;
+    padding: 4px 7px;
+    font-size: 9px;
+    font-weight: 800;
+}
+.favorite-badge {
+    background: #fff0b7;
+    color: #8d6500;
+}
+.blocked-badge {
+    right: 7px;
+    left: auto;
+    background: #ffd8d4;
+    color: #a23c32;
+}
+.blocked-text {
+    color: #b34a41 !important;
+}
+.safety-block {
+    background: #ffe0dc;
+    color: #a43d33;
+    border: 1px solid #ffc1ba;
+    border-radius: 10px;
+    padding: 12px;
+    font-size: 12px;
+    font-weight: 800;
+    margin-top: 12px;
+}
+.safety-summary {
+    background: #e7f8ed;
+    border: 1px solid #bce8cb;
+    border-radius: 12px;
+    padding: 13px;
+    margin-bottom: 18px;
+}
+.safety-summary b,.safety-summary span {
+    display: block;
+}
+.safety-summary span {
+    font-size: 12px;
+    color: #5c7765;
+    margin-top: 4px;
+}
+.allergy-options {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+.allergy-options button {
+    border: 1px solid var(--line);
+    background: #fff;
+    border-radius: 999px;
+    padding: 9px 12px;
+    font: inherit;
+    font-size: 12px;
+    cursor: pointer;
+}
+.allergy-options button.selected {
+    background: #ffd8d4;
+    border-color: #efaaa2;
+    color: #9f3e35;
+    font-weight: 800;
+}
+
+/* ========================================================================== */
+/* PROFILE, PARENT & NETWORK */
+/* ========================================================================== */
+.sync-banner {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: #edf7ff;
+    border: 1px solid #c9e6fa;
+    border-radius: 10px;
+    padding: 10px 12px;
+    margin-bottom: 12px;
+    font-size: 12px;
+}
+.sync-banner span {
+    color: #6d7d88;
+}
+
+/* ========================================================================== */
+/* FOOD SAFETY & PREFERENCES */
+/* ========================================================================== */
+.mini-img-wrap {
+    position: relative;
+}
+.mini-img-wrap>span {
+    position: absolute;
+    right: -3px;
+    bottom: -3px;
+    background: #fff0b7;
+    border-radius: 50%;
+    font-size: 13px;
+    padding: 2px;
+}
+
+/* ========================================================================== */
+/* RECOMMENDATIONS & FOOD CARDS */
+/* ========================================================================== */
+.mini-food.blocked {
+    opacity: .65;
+}
+.mini-food button:disabled {
+    cursor: not-allowed;
+    background: #eee;
+    color: #999;
+}
+
+/* ========================================================================== */
+/* PROFILE, PARENT & NETWORK */
+/* ========================================================================== */
+.parent-grid button:has(b) {
+    min-height: 76px;
+}
+
+/* ========================================================================== */
+/* LOGIN & ACCOUNT SELECTION */
+/* ========================================================================== */
+.login-card input:focus {
+    outline: 2px solid #ffd18a;
+    border-color: var(--orange2);
+}
+.login-card button:disabled {
+    opacity: .45;
+    cursor: not-allowed;
+}
+.login-match {
+    margin-top: 10px;
+    background: #fff8eb;
+    border: 1px solid #f5d99e;
+    border-radius: 10px;
+    padding: 10px 12px;
+}
+.login-match b,.login-match span {
+    display: block;
+}
+.login-match span {
+    font-size: 11px;
+    color: #8a7a62;
+    margin-top: 2px;
+}
+.login-examples {
+    margin-top: 14px;
+    padding: 10px 12px;
+    background: #f7f7fa;
+    border-radius: 10px;
+    font-size: 10px;
+    color: #777;
+}
+.login-examples b,.login-examples span,.login-examples small {
+    display: block;
+}
+.login-examples span {
+    margin-top: 4px;
+    color: #555;
+}
+.login-examples small {
+    margin-top: 3px;
+    color: #999;
+}
+
+/* ========================================================================== */
+/* HOME CONTENT & FRIENDS */
+/* ========================================================================== */
+.food-circle-wrap {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+/* ========================================================================== */
+/* MISCELLANEOUS */
+/* ========================================================================== */
+.circle-fav {
+    position: absolute;
+    right: 4px;
+    bottom: -2px;
+    border: 0;
+    background: #fff;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    box-shadow: 0 2px 8px rgba(0,0,0,.12);
+    color: #aaa;
+    cursor: pointer;
+    font-size: 13px;
+    line-height: 24px;
+    padding: 0;
+}
+.circle-fav.active {
+    background: #fff0b7;
+    color: #d49a00;
+}
+.food-favorite {
+    position: absolute;
+    left: 7px;
+    bottom: 7px;
+    border: 0;
+    background: #fff;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    box-shadow: 0 2px 8px rgba(0,0,0,.15);
+    color: #aaa;
+    cursor: pointer;
+    font-size: 16px;
+    z-index: 3;
+}
+.food-favorite.active {
+    background: #fff0b7;
+    color: #d49a00;
+}
+.item-image-wrap {
+    position: relative;
+}
+.item-favorite {
+    position: absolute;
+    right: 12px;
+    top: 54px;
+    border: 0;
+    background: rgba(255,255,255,.94);
+    border-radius: 999px;
+    padding: 8px 12px;
+    font: inherit;
+    font-size: 12px;
+    font-weight: 800;
+    color: #777;
+    cursor: pointer;
+    box-shadow: 0 3px 12px rgba(0,0,0,.12);
+}
+.item-favorite.active {
+    background: #fff0b7;
+    color: #8d6500;
+}
+
+/* ========================================================================== */
+/* MENU & NAVIGATION */
+/* ========================================================================== */
+.menu-item {
+    position: relative;
+}
+.menu-item:hover {
+    transform: translateY(-1px);
+}
+
+/* ========================================================================== */
+/* MISCELLANEOUS */
+/* ========================================================================== */
+.setting-button {
+    width: 100%;
+    border: 0;
+    border-bottom: 1px solid var(--line);
+    font: inherit;
+    text-align: left;
+    cursor: pointer;
+}
+.setting-button:hover {
+    background: #fff8ea;
+}
+
+/* ========================================================================== */
+/* FOOD SAFETY & PREFERENCES */
+/* ========================================================================== */
+.custom-allergy {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 16px;
+}
+.custom-allergy input {
+    flex: 1;
+    border: 1px solid var(--line);
+    border-radius: 9px;
+    padding: 11px 12px;
+    font: inherit;
+    min-width: 0;
+}
+.allergy-current {
+    background: #fff;
+    border-radius: 12px;
+    padding: 14px;
+    margin: 10px 0 14px;
+}
+.allergy-current>b,.allergy-current>span {
+    display: block;
+}
+.allergy-current>span {
+    color: #888;
+    font-size: 12px;
+    margin-top: 5px;
+}
+.allergy-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+    margin-top: 9px;
+}
+.allergy-tags button {
+    border: 0;
+    background: #ffe2dd;
+    color: #963d34;
+    border-radius: 999px;
+    padding: 7px 10px;
+    font: inherit;
+    font-size: 11px;
+    cursor: pointer;
+}
+.allergy-link-card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 18px;
+}
+.allergy-link-card b,.allergy-link-card span {
+    display: block;
+}
+.allergy-link-card span {
+    font-size: 12px;
+    color: #888;
+    margin-top: 3px;
+}
+
+/* ========================================================================== */
+/* ITEM DETAILS & ACTIONS */
+/* ========================================================================== */
+.allergy-link-card .primary {
+    white-space: nowrap;
+}
+.primary:disabled {
+    opacity: .5;
+    cursor: not-allowed;
+}
+
+/* ========================================================================== */
+/* FLASHFOOD MOTION LAYER */
+/* ========================================================================== */
+
+/* ========================================================================== */
+/* FOUNDATION & THEME */
+/* ========================================================================== */
+:root {
+    --ease: cubic-bezier(.2,.8,.2,1);
+}
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+/* ========================================================================== */
+/* RECOMMENDATIONS & FOOD CARDS */
+/* ========================================================================== */
+button, input, .food-card, .mini-food, .history-row, .school-card, .setting-row, .parent-grid button, .map-info, .safety-summary, .send-card, .restriction-row, .recommend-grid > * {
+    transition: transform .22s var(--ease), opacity .22s ease, box-shadow .22s ease, background-color .22s ease, border-color .22s ease, color .22s ease;
+}
+
+/* ========================================================================== */
+/* INTERACTION & ACCESSIBILITY */
+/* ========================================================================== */
+button:not(:disabled):hover {
+    transform: translateY(-2px);
+}
+button:not(:disabled):active {
+    transform: translateY(0) scale(.97);
+}
+
+/* ========================================================================== */
+/* MISCELLANEOUS */
+/* ========================================================================== */
+.screen {
+    animation: screenIn .34s var(--ease) both;
+}
+
+/* ========================================================================== */
+/* LOGIN & ACCOUNT SELECTION */
+/* ========================================================================== */
+.login-card {
+    animation: cardIn .55s var(--ease) both;
+}
+
+/* ========================================================================== */
+/* APP SHELL & HEADER */
+/* ========================================================================== */
+.topbar {
+    animation: dropIn .42s var(--ease) both;
+}
+
+/* ========================================================================== */
+/* BOTTOM NAVIGATION */
+/* ========================================================================== */
+.bottom {
+    animation: riseIn .42s var(--ease) both;
+}
+
+/* ========================================================================== */
+/* MESSAGES & ACCOUNT ACTIONS */
+/* ========================================================================== */
+.toast {
+    animation: toastIn .28s var(--ease), toastOut .28s ease 1.92s forwards;
+}
+
+/* ========================================================================== */
+/* RECOMMENDATIONS & FOOD CARDS */
+/* ========================================================================== */
+.food-card, .mini-food, .history-row, .school-card, .parent-grid button, .map-info, .restriction-row {
+    animation: itemIn .4s var(--ease) both;
+}
+.food-card:nth-child(2), .mini-food:nth-child(2), .history-row:nth-child(2), .restriction-row:nth-child(2) {
+    animation-delay: .04s;
+}
+.food-card:nth-child(3), .mini-food:nth-child(3), .history-row:nth-child(3), .restriction-row:nth-child(3) {
+    animation-delay: .08s;
+}
+.food-card:nth-child(4), .mini-food:nth-child(4), .history-row:nth-child(4), .restriction-row:nth-child(4) {
+    animation-delay: .12s;
+}
+.food-card:hover, .mini-food:hover, .history-row:hover, .school-card:hover, .map-info:hover {
+    box-shadow: 0 12px 28px rgba(0,0,0,.08);
+}
+
+/* ========================================================================== */
+/* ITEM DETAILS & ACTIONS */
+/* ========================================================================== */
+.primary {
+    box-shadow: 0 8px 20px rgba(0,0,0,.10);
+}
+.primary:hover {
+    box-shadow: 0 12px 26px rgba(0,0,0,.15);
+}
+
+/* ========================================================================== */
+/* INTERACTION & ACCESSIBILITY */
+/* ========================================================================== */
+img {
+    transition: transform .35s var(--ease), filter .35s ease;
+}
+
+/* ========================================================================== */
+/* RECOMMENDATIONS & FOOD CARDS */
+/* ========================================================================== */
+.food-card:hover img, .mini-food:hover img, .history-row:hover img {
+    transform: scale(1.045);
+}
+
+/* ========================================================================== */
+/* ANIMATIONS */
+/* ========================================================================== */
+@keyframes screenIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes cardIn {
+    from {
+        opacity: 0;
+        transform: translateY(18px) scale(.985);
+    }
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+@keyframes dropIn {
+    from {
+        opacity: 0;
+        transform: translateY(-12px);
+    }
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+@keyframes riseIn {
+    from {
+        opacity: 0;
+        transform: translateY(14px);
+    }
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+@keyframes itemIn {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+@keyframes toastIn {
+    from {
+        opacity: 0;
+        transform: translate(-50%, 12px) scale(.96);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, 0) scale(1);
+    }
+}
+@keyframes toastOut {
+    to {
+        opacity: 0;
+        transform: translate(-50%, 8px);
+    }
+}
+
+/* ========================================================================== */
+/* RESPONSIVE DESIGN */
+/* ========================================================================== */
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: .001ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: .001ms !important;
+    }
+}
+
+/* ========================================================================== */
+/* SDG 2 / HEALTH ADDITIONS */
+/* ========================================================================== */
+
+/* ========================================================================== */
+/* BOTTOM NAVIGATION */
+/* ========================================================================== */
+.bottom {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.bottom-inner {
+    width: min(100%,760px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin: 0 auto;
+}
+.bottom-inner button {
+    flex: 0 1 150px;
+    min-width: 0;
+}
+
+/* ========================================================================== */
+/* HEALTH & ASSISTANCE */
+/* ========================================================================== */
+.assistance-card,.assistance-hero {
+    background: linear-gradient(135deg,#fff8e9,#f4fff7);
+    border: 1px solid #f1dfb5;
+    border-radius: 16px;
+    padding: 18px;
+    margin: 16px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+}
+.assistance-card h3,.assistance-hero h2 {
+    margin: 7px 0 5px;
+}
+.assistance-card p,.assistance-hero p {
+    margin: 0;
+    color: #6e756f;
+    font-size: 12px;
+    line-height: 1.5;
+}
+.assistance-hero {
+    display: block;
+    background: linear-gradient(135deg,#fff4dc,#e9f8ee);
+}
+.assistance-note {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: #eef9f1;
+    border: 1px solid #c8e8d1;
+    border-radius: 12px;
+    padding: 12px;
+    margin: 12px 0;
+    font-size: 12px;
+}
+.assistance-note span {
+    color: #62766a;
+}
+.assistance-list {
+    display: grid;
+    gap: 10px;
+}
+.assistance-option {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 12px;
+}
+.assistance-icon {
+    width: 46px;
+    height: 46px;
+    border-radius: 12px;
+    background: #fff4d9;
+    display: grid;
+    place-items: center;
+    font-size: 24px;
+}
+.assistance-copy {
+    flex: 1;
+    min-width: 0;
+}
+.assistance-copy b,.assistance-copy span,.assistance-copy small {
+    display: block;
+}
+.assistance-copy span {
+    font-size: 11px;
+    color: #777;
+    margin-top: 3px;
+}
+.assistance-copy small {
+    font-size: 10px;
+    color: #6c8a73;
+    margin-top: 5px;
+}
+
+/* ========================================================================== */
+/* STOCK & ORDER STATUS */
+/* ========================================================================== */
+.healthy-badge {
+    color: #3e7a4d !important;
+    font-weight: 700;
+    margin-top: 3px;
+}
+
+/* ========================================================================== */
+/* ITEM DETAILS & ACTIONS */
+/* ========================================================================== */
+.assistance-option .primary {
+    white-space: nowrap;
+}
+
+/* ========================================================================== */
+/* RESPONSIVE DESIGN */
+/* ========================================================================== */
+@media (max-width:600px) {
+    .bottom-inner {
+        gap: 2px;
+    }
+    .bottom-inner button {
+        padding: 8px 4px;
+        font-size: 10px;
+    }
+    .assistance-card {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+    .assistance-card .primary {
+        width: 100%;
+    }
+    .assistance-option .primary {
+        padding: 9px 10px;
+    }
+}
+
+/* ========================================================================== */
+/* AUTHENTICATION + HEALTH DETAIL */
+/* ========================================================================== */
+
+/* ========================================================================== */
+/* LOGIN & ACCOUNT SELECTION */
+/* ========================================================================== */
+.login-card label + input + label {
+    margin-top: 12px;
+}
+.login-error {
+    margin: 10px 0;
+    padding: 10px 12px;
+    border-radius: 12px;
+    background: #fff1f1;
+    color: #a33;
+    font-size: 12px;
+    line-height: 1.4;
+}
+
+/* ========================================================================== */
+/* STOCK & ORDER STATUS */
+/* ========================================================================== */
+.healthy-detail {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    margin: 14px 0;
+    padding: 12px 14px;
+    border-radius: 14px;
+    background: #f0f8f1;
+}
+.healthy-detail b {
+    font-size: 13px;
+}
+.healthy-detail span {
+    font-size: 11px;
+    line-height: 1.4;
+    opacity: .75;
+}
+
+/* ========================================================================== */
+/* PROFILE ACCOUNT MENU + NETWORK/SETTINGS */
+/* ========================================================================== */
+
+/* ========================================================================== */
+/* MISCELLANEOUS */
+/* ========================================================================== */
+.profile-menu-wrap {
+    position: relative;
+    margin-top: 16px;
+}
+.profile-menu-trigger {
+    width: 100%;
+    border: 1px solid var(--line);
+    background: #fff;
+    border-radius: 12px;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font: inherit;
+    font-weight: 800;
+    cursor: pointer;
+}
+.profile-menu-trigger:hover {
+    background: #fff8ea;
+}
+.profile-dropdown {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: calc(100% + 6px);
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    box-shadow: 0 12px 30px rgba(0,0,0,.12);
+    padding: 6px;
+    z-index: 20;
+    animation: itemIn .18s ease both;
+}
+.profile-dropdown button {
+    display: block;
+    width: 100%;
+    border: 0;
+    background: transparent;
+    text-align: left;
+    padding: 12px;
+    border-radius: 8px;
+    font: inherit;
+    cursor: pointer;
+}
+.profile-dropdown button:hover {
+    background: #f7f7f7;
+}
+.profile-dropdown .danger {
+    color: #b43e35;
+}
+
+/* ========================================================================== */
+/* HOME CONTENT & FRIENDS */
+/* ========================================================================== */
+.friends-grid {
+    display: grid;
+    gap: 10px;
+}
+.friend-card {
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 13px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.friend-card img {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.friend-card>div {
+    flex: 1;
+    min-width: 0;
+}
+.friend-card b,.friend-card span {
+    display: block;
+}
+.friend-card span {
+    font-size: 11px;
+    color: #888;
+    margin-top: 3px;
+}
+.friend-card strong {
+    font-size: 10px;
+    color: #4b855a;
+    background: #e8f6ec;
+    padding: 6px 8px;
+    border-radius: 999px;
+    white-space: nowrap;
+}
+
+/* ========================================================================== */
+/* PROFILE, PARENT & NETWORK */
+/* ========================================================================== */
+.settings-card {
+    background: #fff;
+    border-radius: 14px;
+    margin-bottom: 12px;
+    overflow: hidden;
+}
+.settings-card h3 {
+    padding: 15px 15px 8px;
+    margin: 0;
+}
+.settings-card .setting-row {
+    align-items: center;
+}
+.settings-card .setting-row>div {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+.settings-card small {
+    font-size: 11px;
+    color: #888;
+    font-weight: 400;
+}
+.settings-card .setting-row>span {
+    font-weight: 800;
+    font-size: 11px;
+    color: var(--orange2);
+}
+
+/* ========================================================================== */
+/* STOCK + ORDER STATUS */
+/* ========================================================================== */
+
+/* ========================================================================== */
+/* STOCK & ORDER STATUS */
+/* ========================================================================== */
+.stock-ok,.stock-low {
+    display: inline-block !important;
+    font-size: 10px !important;
+    font-weight: 800;
+    margin-top: 4px;
+}
+.stock-ok {
+    color: #4d8158 !important;
+}
+.stock-low {
+    color: #b34a41 !important;
+}
+.stock-detail {
+    margin: 12px 0;
+    padding: 10px 12px;
+    border-radius: 10px;
+    background: #edf8ef;
+    color: #4d8158;
+    font-size: 12px;
+    font-weight: 800;
+}
+.stock-detail.low {
+    background: #fff0ed;
+    color: #b34a41;
+}
+.stock-warning {
+    background: #fff0ed;
+    border: 1px solid #ffc5bc;
+    color: #a84439;
+    border-radius: 10px;
+    padding: 11px 12px;
+    font-size: 12px;
+    font-weight: 700;
+    margin: 12px 0;
+}
+.order-banner {
+    background: linear-gradient(135deg,#fff5df,#f2fff6);
+    border: 1px solid #efd9aa;
+    border-radius: 14px;
+    padding: 14px 16px;
+    margin: 16px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    box-shadow: var(--shadow);
+    animation: itemIn .4s var(--ease) both;
+}
+.order-banner b,.order-banner small {
+    display: block;
+}
+.order-banner b {
+    margin-top: 6px;
+}
+.order-banner small {
+    font-size: 11px;
+    color: #777;
+    margin-top: 3px;
+}
+
+/* ========================================================================== */
+/* MISCELLANEOUS */
+/* ========================================================================== */
+.order-arrow {
+    font-size: 28px;
+    color: var(--orange2);
+}
+
+/* ========================================================================== */
+/* STOCK & ORDER STATUS */
+/* ========================================================================== */
+.order-status-card {
+    background: #fff;
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: var(--shadow);
+}
+.order-status-card h2 {
+    margin: 8px 0 4px;
+}
+.order-status-card>p {
+    margin: 0;
+    color: #777;
+    font-size: 12px;
+}
+
+/* ========================================================================== */
+/* HOME & HERO */
+/* ========================================================================== */
+.status-steps {
+    display: grid;
+    gap: 0;
+    margin: 24px 0;
+}
+.status-step {
+    display: flex;
+    gap: 12px;
+    position: relative;
+    min-height: 66px;
+}
+.status-step:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    left: 10px;
+    top: 23px;
+    width: 2px;
+    height: 43px;
+    background: #ddd;
+}
+.status-step.done:not(:last-child)::after {
+    background: #79b886;
+}
+.status-step>span {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    background: #eee;
+    color: #999;
+    font-size: 11px;
+    font-weight: 900;
+    z-index: 1;
+}
+.status-step.done>span {
+    background: #dff3e3;
+    color: #43834f;
+}
+.status-step.current>span {
+    box-shadow: 0 0 0 5px #fff3dc;
+    background: var(--orange);
+    color: #7d4a12;
+}
+.status-step b,.status-step small {
+    display: block;
+}
+.status-step small {
+    font-size: 11px;
+    color: #888;
+    margin-top: 3px;
+}
+
+/* ========================================================================== */
+/* STOCK & ORDER STATUS */
+/* ========================================================================== */
+.order-note {
+    background: #f8f8f8;
+    border-radius: 10px;
+    padding: 12px;
+    font-size: 12px;
+    color: #666;
+    margin-bottom: 14px;
+}
+.secondary {
+    border: 1px solid var(--line);
+    background: #fff;
+    color: #555;
+    border-radius: 10px;
+    padding: 12px 16px;
+    font: inherit;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+/* ========================================================================== */
+/* ITEM DETAILS & ACTIONS */
+/* ========================================================================== */
+.secondary.wide {
+    width: 100%;
+    margin-top: 8px;
+}
+
+/* ========================================================================== */
+/* RECOMMENDATIONS & FOOD CARDS */
+/* ========================================================================== */
+.mini-food .stock-low,.mini-food .stock-ok {
+    margin-left: auto;
+    margin-right: 5px;
+    align-self: center;
+}
+.mini-food {
+    align-items: center;
+}
+
+/* ========================================================================== */
+/* CHECKOUT RECIPIENT + PARENT LAYOUT REFINEMENTS */
+/* ========================================================================== */
+
+/* ========================================================================== */
+/* CART & CHECKOUT */
+/* ========================================================================== */
+.checkout-section {
+    margin-top: 18px;
+}
+.checkout-section:first-child {
+    margin-top: 0;
+}
+.checkout-section h3 {
+    margin: 0 0 8px;
+}
+.checkout-select {
+    width: 100%;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 12px 13px;
+    background: #fff;
+    color: var(--ink);
+    font: inherit;
+    font-weight: 700;
+    cursor: pointer;
+    min-height: 46px;
+}
+.checkout-select:focus {
+    outline: 2px solid #ffd18a;
+    border-color: var(--orange2);
+}
+
+/* ========================================================================== */
+/* HOME CONTENT & FRIENDS */
+/* ========================================================================== */
+.friend-picker {
+    margin-top: 10px;
+    padding: 12px;
+    background: #f8f8fa;
+    border: 1px solid var(--line);
+    border-radius: 12px;
+}
+.friend-picker label {
+    display: block;
+    font-size: 11px;
+    font-weight: 800;
+    color: #666;
+    margin-bottom: 6px;
+}
+
+/* ========================================================================== */
+/* CART & CHECKOUT */
+/* ========================================================================== */
+.checkout-recipient {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    padding: 10px 12px;
+    background: #f6faf7;
+    border: 1px solid #dcecdf;
+    border-radius: 10px;
+    font-size: 12px;
+    color: #667;
+}
+.checkout-recipient strong {
+    margin-left: 4px;
+    color: var(--ink);
+}
+
+/* ========================================================================== */
+/* PROFILE, PARENT & NETWORK */
+/* ========================================================================== */
+.parent-banner {
+    margin-bottom: 18px;
+}
+.parent-grid {
+    margin-top: 16px;
+    gap: 12px;
+}
+.parent-grid button {
+    min-height: 88px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.parent-grid b {
+    line-height: 1.25;
+}
+.parent-grid span {
+    line-height: 1.35;
+}
+
+/* ========================================================================== */
+/* RESPONSIVE DESIGN */
+/* ========================================================================== */
+@media (max-width:600px) {
+    .parent-grid {
+        gap: 8px;
+        margin-top: 14px;
+    }
+    .parent-grid button {
+        min-height: 82px;
+        padding: 13px;
+    }
+    .friend-picker {
+        padding: 10px;
+    }
+}
+
+
+/* ========================================================================== */
+/* CHECKOUT — FRIEND WINDOW                                                   */
+/* ========================================================================== */
+.friend-window-trigger {
+    width: 100%;
+    min-height: 68px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 12px;
+    border: 2px solid var(--line);
+    border-radius: 14px;
+    background: #fff;
+    color: var(--ink);
+    font: inherit;
+    text-align: left;
+    cursor: pointer;
+    transition: border-color .15s ease, box-shadow .15s ease;
+}
+.friend-window-trigger:hover,
+.friend-window-trigger:focus-visible {
+    border-color: var(--orange2);
+    box-shadow: 0 4px 16px rgba(36,31,25,.07);
+    outline: none;
+}
+.friend-trigger-avatar,
+.friend-option-avatar {
+    width: 44px;
+    height: 44px;
+    flex: 0 0 44px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    background: #fff4df;
+    overflow: hidden;
+    font-size: 21px;
+}
+.friend-trigger-avatar img,
+.friend-option img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.friend-trigger-copy,
+.friend-option > span:not(.friend-option-avatar) {
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+.friend-trigger-copy b,
+.friend-option b {
+    font-size: 14px;
+}
+.friend-trigger-copy small,
+.friend-option small {
+    color: var(--muted);
+    font-size: 11px;
+}
+.friend-trigger-arrow {
+    margin-left: auto;
+    color: #999;
+    font-size: 25px;
+}
+
+/* ========================================================================== */
+/* CHECKOUT — FRIEND MODAL                                                    */
+/* ========================================================================== */
+.friend-modal-backdrop {
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: rgba(25,23,28,.45);
+}
+.friend-modal {
+    width: min(440px, 100%);
+    max-height: min(650px, 90vh);
+    overflow-y: auto;
+    padding: 18px;
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 20px 60px rgba(0,0,0,.2);
+}
+.friend-modal-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+.friend-modal-header h3 {
+    margin: 0;
+    font-size: 18px;
+}
+.friend-modal-header p {
+    margin: 4px 0 0;
+    color: var(--muted);
+    font-size: 12px;
+}
+.friend-modal-close {
+    width: 34px;
+    height: 34px;
+    border: 0;
+    border-radius: 50%;
+    background: #f3f3f5;
+    color: #555;
+    font-size: 22px;
+    cursor: pointer;
+}
+.friend-option {
+    width: 100%;
+    min-height: 64px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 8px;
+    padding: 9px 10px;
+    border: 2px solid var(--line);
+    border-radius: 13px;
+    background: #fff;
+    color: var(--ink);
+    font: inherit;
+    text-align: left;
+    cursor: pointer;
+}
+.friend-option:hover,
+.friend-option.selected {
+    border-color: var(--orange2);
+    background: #fff8ed;
+}
+.friend-option > strong {
+    margin-left: auto;
+    color: var(--green);
+    font-size: 18px;
+}
+.friend-modal-empty {
+    padding: 18px 8px 8px;
+    color: var(--muted);
+    text-align: center;
+    font-size: 13px;
+}
+
+/* ========================================================================== */
+/* CHECKOUT — DELIVERY LOCATION                                               */
+/* ========================================================================== */
+.delivery-details {
+    margin-top: 10px;
+    padding: 14px;
+    border: 1px solid #ffd68d;
+    border-radius: 13px;
+    background: #fff9ef;
+}
+.delivery-details-heading {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    margin-bottom: 12px;
+}
+.delivery-details-heading > span {
+    font-size: 20px;
+}
+.delivery-details-heading div {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+.delivery-details-heading small {
+    color: var(--muted);
+    font-size: 11px;
+}
+.delivery-fields {
+    display: grid;
+    grid-template-columns: 1.35fr .8fr;
+    gap: 10px;
+}
+.delivery-fields label {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    font-size: 11px;
+    font-weight: 800;
+}
+.delivery-fields input {
+    width: 100%;
+    min-height: 44px;
+    padding: 10px 11px;
+    border: 1px solid var(--line);
+    border-radius: 9px;
+    background: #fff;
+    color: var(--ink);
+    font: inherit;
+}
+.delivery-fields input:focus {
+    outline: 2px solid #ffd18a;
+    border-color: var(--orange2);
+}
+
+/* ========================================================================== */
+/* CHECKOUT — RESTORED EMOJI LABELS                                          */
+/* ========================================================================== */
+.choice-row button span {
+    display: block;
+    font-size: 14px;
+    font-weight: 800;
+}
+.choice-row button small {
+    display: block;
+    margin-top: 4px;
+    color: var(--muted);
+    font-size: 11px;
+}
+
+/* ========================================================================== */
+/* MOBILE CHECKOUT                                                            */
+/* ========================================================================== */
+@media (max-width:600px) {
+    .friend-modal-backdrop {
+        align-items: flex-end;
+        padding: 0;
+    }
+    .friend-modal {
+        width: 100%;
+        max-height: 82vh;
+        border-radius: 20px 20px 0 0;
+        padding: 16px;
+    }
+    .delivery-fields {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ========================================================================== */
+/* CHECKOUT — MYSELF / SEND TO A FRIEND                                      */
+/* ========================================================================== */
+.order-for-buttons {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+}
+
+.order-for-button {
+    min-width: 0;
+    min-height: 76px;
+    padding: 12px;
+    border: 2px solid var(--line);
+    border-radius: 12px;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-align: left;
+    font: inherit;
+    cursor: pointer;
+}
+
+.order-for-button:hover {
+    border-color: var(--orange2);
+}
+
+.order-for-button.selected {
+    border-color: var(--orange2);
+    background: #fff7e9;
+}
+
+.order-for-icon {
+    width: 38px;
+    height: 38px;
+    flex: 0 0 38px;
+    display: grid;
+    place-items: center;
+    border-radius: 10px;
+    background: #f5f5f5;
+    font-size: 20px;
+}
+
+.order-for-button > span:not(.order-for-icon) {
+    min-width: 0;
+    flex: 1;
+}
+
+.order-for-button b,
+.order-for-button small {
+    display: block;
+}
+
+.order-for-button small {
+    margin-top: 4px;
+    color: #888;
+    font-size: 11px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.order-for-arrow {
+    color: #888;
+    font-size: 22px;
+    line-height: 1;
+}
+
+/* ========================================================================== */
+/* FRIEND SELECTION WINDOW — MATCH THE FRIENDS TAB                           */
+/* ========================================================================== */
+.friend-modal-backdrop {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: rgba(20, 20, 20, 0.45);
+}
+
+.friend-modal {
+    width: min(520px, 100%);
+    max-height: min(680px, 88vh);
+    overflow: hidden;
+    background: #f7f7f7;
+    border-radius: 18px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+    padding: 18px;
+}
+
+.friend-modal-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 14px;
+}
+
+.friend-modal-header h3 {
+    margin: 0;
+}
+
+.friend-modal-header p {
+    margin: 4px 0 0;
+    color: #888;
+    font-size: 12px;
+}
+
+.friend-modal-close {
+    width: 34px;
+    height: 34px;
+    flex: 0 0 34px;
+    border: 0;
+    border-radius: 50%;
+    background: #fff;
+    color: #555;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.friend-modal-list {
+    display: grid;
+    gap: 8px;
+    max-height: calc(min(680px, 88vh) - 100px);
+    overflow-y: auto;
+}
+
+.friend-option {
+    width: 100%;
+    min-height: 66px;
+    padding: 10px 12px;
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-align: left;
+    font: inherit;
+    cursor: pointer;
+}
+
+.friend-option:hover,
+.friend-option.selected {
+    border-color: var(--orange2);
+    background: #fff7e9;
+}
+
+.friend-option img,
+.friend-option-avatar {
+    width: 46px;
+    height: 46px;
+    min-width: 46px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: grid;
+    place-items: center;
+    background: #f0f0f0;
+    font-size: 21px;
+}
+
+.friend-option-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.friend-option-info b,
+.friend-option-info small {
+    display: block;
+}
+
+.friend-option-info b {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.friend-option-info small {
+    margin-top: 3px;
+    color: #888;
+    font-size: 11px;
+}
+
+.friend-option > strong {
+    color: #4b855a;
+    font-size: 17px;
+}
+
+.friend-modal-empty {
+    padding: 24px;
+    border: 1px dashed var(--line);
+    border-radius: 12px;
+    background: #fff;
+    text-align: center;
+    color: #888;
+}
+
+/* ========================================================================== */
+/* MOBILE — FRIEND SELECTION                                                  */
+/* ========================================================================== */
+@media (max-width: 600px) {
+    .order-for-buttons {
+        grid-template-columns: 1fr;
+    }
+
+    .friend-modal-backdrop {
+        align-items: flex-end;
+        padding: 0;
+    }
+
+    .friend-modal {
+        width: 100%;
+        max-height: 84vh;
+        border-radius: 20px 20px 0 0;
+        padding: 16px;
+    }
+
+    .friend-modal-list {
+        max-height: calc(84vh - 100px);
+    }
+}
+
+
+/* Add Money UI */
+.add-money-button {
+    border: 1px solid var(--orange2);
+    background: #fff7e9;
+    color: #a85d00;
+    border-radius: 9px;
+    padding: 8px 12px;
+    font: inherit;
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.add-money-button:hover {
+    background: #ffefd2;
+}
+
+.balance-modal-backdrop {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    display: grid;
+    place-items: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.38);
+}
+
+.balance-modal {
+    width: min(420px, 100%);
+    background: #fff;
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+}
+
+.balance-modal-head {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.balance-modal-head h3 {
+    margin: 7px 0 0;
+    font-size: 20px;
+}
+
+.modal-close {
+    width: 34px;
+    height: 34px;
+    border: 0;
+    border-radius: 50%;
+    background: #f4f4f4;
+    color: #666;
+    font-size: 22px;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.amount-options {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+    margin: 16px 0;
+}
+
+.amount-options button {
+    border: 1px solid var(--line);
+    background: #fff;
+    border-radius: 9px;
+    padding: 10px 6px;
+    font: inherit;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.amount-options button.selected {
+    border-color: var(--orange2);
+    background: #fff7e9;
+    color: #a85d00;
+}
+
+.amount-label {
+    display: block;
+    font-size: 12px;
+    font-weight: 700;
+    color: #666;
+}
+
+.amount-label input {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 6px;
+    padding: 11px 12px;
+    border: 1px solid var(--line);
+    border-radius: 9px;
+    font: inherit;
+    outline: none;
+}
+
+.amount-label input:focus {
+    border-color: var(--orange2);
+}
+
+.balance-confirm {
+    width: 100%;
+    margin-top: 14px;
+}
+
+@media (max-width: 600px) {
+    .balance-card-head {
+        align-items: flex-start;
+    }
+
+    .amount-options {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+/* =========================================================
+   BALANCE — PAYMENT METHOD OPTIONS
+   ========================================================= */
+.balance-payment-section{
+  margin-top:18px;
+}
+
+.balance-payment-section h4{
+  margin:0 0 10px;
+  font-size:14px;
+}
+
+.balance-payment-options{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:10px;
+}
+
+.balance-payment-option{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  width:100%;
+  border:1px solid var(--line);
+  background:#fff;
+  border-radius:12px;
+  padding:12px;
+  text-align:left;
+  font:inherit;
+  cursor:pointer;
+  transition:transform .15s ease, border-color .15s ease, box-shadow .15s ease;
+}
+
+.balance-payment-option:hover{
+  border-color:var(--orange2);
+  box-shadow:var(--shadow);
+  transform:translateY(-1px);
+}
+
+.balance-payment-icon{
+  width:38px;
+  height:38px;
+  display:grid;
+  place-items:center;
+  flex:0 0 38px;
+  border-radius:10px;
+  background:#fff7e9;
+  font-size:19px;
+}
+
+.balance-payment-option b,
+.balance-payment-option small{
+  display:block;
+}
+
+.balance-payment-option b{
+  font-size:13px;
+}
+
+.balance-payment-option small{
+  margin-top:3px;
+  color:#888;
+  font-size:11px;
+  line-height:1.3;
+}
+
+@media(max-width:600px){
+  .balance-payment-options{
+    grid-template-columns:1fr;
+  }
+}
+
+/* Top Up + larger points display */
+.balance-main {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+.balance-main .add-money-button {
+  margin-left: auto;
+  white-space: nowrap;
+}
+.points-large {
+  margin-top: 18px;
+  padding: 16px 18px;
+  border: 1px solid rgba(0,0,0,.08);
+  border-radius: 16px;
+  background: rgba(255,255,255,.55);
+}
+.points-large-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+.points-large-head div {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+.points-large-head b {
+  font-size: 1.05rem;
+}
+.points-large-head small {
+  opacity: .7;
+}
+.points-large-head > strong {
+  font-size: 1.2rem;
+}
+.points-progress {
+  height: 14px;
+  border-radius: 999px;
+  overflow: hidden;
+}
+.points-progress span {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  transition: width .25s ease;
+}
+
+/* ========================================================================== */
+/* UNIFIED APP SHELL & BOTTOM NAVIGATION */
+/* Keep the bottom navigation visually connected to the main website shell. */
+/* ========================================================================== */
+.bottom {
+    left: 50%;
+    right: auto;
+    width: min(100%, 1040px);
+    transform: translateX(-50%);
+    padding: 0;
+    background: var(--orange);
+    border-radius: 0;
+}
+
+.bottom button.active {
+    background: transparent;
+}
+
+/* ========================================================================== */
+/* FULL-WIDTH DESKTOP APP LAYOUT */
+/* Keep the whole FlashFood UI centered, but make the actual website wider. */
+@media (min-width: 900px) {
+    .app-shell {
+        max-width: 1200px;
+        width: 100%;
+    }
+
+    .main {
+        padding: 0 48px;
+    }
+
+    .screen {
+        max-width: 1000px;
+        width: 100%;
+        padding-left: 28px;
+        padding-right: 28px;
+    }
+
+    .bottom {
+        width: min(100%, 1200px);
+        left: 50%;
+        right: auto;
+        transform: translateX(-50%);
+        padding: 0;
+    }
+
+    .bottom-inner {
+        width: 100%;
+        max-width: none;
+        gap: 0;
+    }
+
+    .bottom-inner button {
+        flex: 1 1 0;
+        max-width: none;
+        width: auto;
+    }
+}
+
+/* FINAL BOTTOM NAV ALIGNMENT FIX */
+@media (min-width: 900px) {
+  .bottom {
+    left: 50%;
+    right: auto;
+    width: min(1200px, 100vw);
+    max-width: 100vw;
+    transform: translateX(-50%);
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+  .bottom-inner {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    gap: 0;
+    box-sizing: border-box;
+  }
+}
+
+/* FINAL FIX: center the full-width bottom navigation without letting the
+   entrance animation override its horizontal transform. */
+@media (min-width: 900px) {
+  .bottom {
+    left: 50% !important;
+    right: auto !important;
+    width: min(1200px, 100vw) !important;
+    max-width: 100vw !important;
+    transform: translateX(-50%) !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    animation: none !important;
+  }
+
+  .bottom-inner {
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
+    gap: 0 !important;
+  }
+
+  .bottom-inner button {
+    flex: 1 1 0 !important;
+    max-width: none !important;
+    width: auto !important;
+  }
+}
+
+/* ========================================================================== */
+/* NEW FEATURES: NUTRITION, FRIEND PROFILES, HORIZONTAL HOME FOOD ROWS */
+/* ========================================================================== */
+.food-row {
+    display: flex;
+    gap: 18px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x proximity;
+    scrollbar-width: thin;
+    padding: 12px 14px 16px;
+}
+.food-row > .food-circle-wrap {
+    flex: 0 0 150px;
+    scroll-snap-align: start;
+}
+.food-row::-webkit-scrollbar { height: 6px; }
+.food-row::-webkit-scrollbar-thumb { background: #d9d9d9; border-radius: 999px; }
+
+.nutrition-button {
+    position: absolute;
+    top: 9px;
+    right: 9px;
+    z-index: 3;
+    border: 1px solid rgba(255,255,255,.85);
+    background: rgba(255,255,255,.95);
+    color: #9a4d00;
+    border-radius: 999px;
+    padding: 6px 9px;
+    font-size: 10px;
+    font-weight: 800;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0,0,0,.10);
+}
+.nutrition-button:hover { background: #fff; transform: translateY(-1px); }
+.menu-image-wrap, .item-image-wrap { position: relative; }
+.nutrition-panel {
+    margin: 9px 0;
+    padding: 10px;
+    border: 1px solid var(--line);
+    border-radius: 11px;
+    background: #fffaf1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5px 10px;
+    font-size: 11px;
+}
+.nutrition-panel b { grid-column: 1 / -1; font-size: 12px; margin-bottom: 2px; }
+.nutrition-panel span { display:flex; justify-content:space-between; gap:8px; color:#666; }
+.nutrition-panel strong { color:#2d2d2d; }
+.item-nutrition-button { top: 12px; right: 12px; }
+.nutrition-detail {
+    margin: 16px 0;
+    padding: 14px;
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    background: #fffaf1;
+}
+.nutrition-detail > div { display:flex; justify-content:space-between; align-items:center; margin-bottom:10px; }
+.nutrition-detail > div b { font-size:15px; }
+.nutrition-detail > div span { font-size:11px; color:#888; }
+.nutrition-detail section { display:grid; grid-template-columns:repeat(5,1fr); gap:7px; }
+.nutrition-detail section span { display:flex; flex-direction:column; gap:3px; padding:9px 6px; background:#fff; border-radius:9px; font-size:10px; color:#777; text-align:center; }
+.nutrition-detail section strong { color:#292929; font-size:12px; }
+
+.friend-card-button {
+    width: 100%;
+    text-align: left;
+    font: inherit;
+    color: inherit;
+    cursor: pointer;
+}
+.friend-card-button:hover { border-color: #f2b33d; transform: translateY(-1px); }
+.friend-profile-backdrop {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    background: rgba(25,25,25,.42);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+.friend-profile {
+    width: min(620px, 100%);
+    max-height: min(780px, 90vh);
+    overflow-y: auto;
+    background: #fff;
+    border-radius: 20px;
+    padding: 22px;
+    box-shadow: 0 20px 60px rgba(0,0,0,.20);
+}
+.friend-profile-head { display:flex; align-items:center; gap:14px; }
+.friend-profile-head img { width:64px; height:64px; border-radius:50%; object-fit:cover; }
+.friend-profile-head > div { flex:1; min-width:0; }
+.friend-profile-head h2 { margin:0 0 4px; font-size:21px; }
+.friend-profile-head span,.friend-profile-head small { display:block; color:#777; font-size:12px; }
+.friend-profile-head button { border:0; background:#f3f3f3; width:32px; height:32px; border-radius:50%; font-size:21px; cursor:pointer; }
+.friend-profile-stats { display:grid; grid-template-columns:repeat(3,1fr); gap:10px; margin:18px 0; }
+.friend-profile-stats div { background:#fafafa; border:1px solid var(--line); border-radius:12px; padding:12px; text-align:center; }
+.friend-profile-stats b,.friend-profile-stats span { display:block; }
+.friend-profile-stats b { font-size:19px; }
+.friend-profile-stats span { color:#888; font-size:10px; margin-top:3px; }
+.friend-profile-section { margin-top:18px; }
+.friend-profile-section h3 { margin:0 0 9px; font-size:15px; }
+.friend-food-list { display:grid; gap:7px; }
+.friend-food-list > div { display:flex; align-items:center; gap:10px; padding:8px; border:1px solid var(--line); border-radius:10px; }
+.friend-food-list img { width:38px; height:38px; border-radius:9px; object-fit:cover; }
+.friend-food-list span { flex:1; min-width:0; font-size:12px; }
+.friend-food-list span small { display:block; color:#999; font-size:9px; margin-top:2px; }
+.friend-food-list b { font-size:11px; }
+.danger-wide {
+    width:100%;
+    margin-top:20px;
+    padding:11px 14px;
+    border:1px solid #e6b6b2;
+    border-radius:10px;
+    background:#fff4f3;
+    color:#b43e35;
+    font-weight:800;
+    cursor:pointer;
+}
+@media (max-width: 620px) {
+    .nutrition-detail section { grid-template-columns:repeat(3,1fr); }
+    .food-row > .food-circle-wrap { flex-basis: 130px; }
+    .friend-profile { padding:16px; }
+}
+
+/* FRIEND NETWORK */
+.friends-toolbar { display:flex; align-items:center; justify-content:space-between; gap:14px; margin:0 0 14px; }
+.friends-toolbar > div { display:flex; flex-direction:column; gap:3px; }
+.friends-toolbar span { color:#888; font-size:11px; }
+.add-friend-button { width:auto; padding:10px 14px; white-space:nowrap; }
+.add-friend-panel { background:#fff; border:1px solid var(--line); border-radius:16px; padding:14px; margin-bottom:14px; box-shadow:0 8px 24px rgba(0,0,0,.06); }
+.add-friend-panel input { width:100%; box-sizing:border-box; border:1px solid var(--line); border-radius:10px; padding:11px 12px; font:inherit; margin-bottom:10px; outline:none; }
+.add-friend-panel input:focus { border-color:#e9a52d; box-shadow:0 0 0 3px rgba(233,165,45,.12); }
+.add-friend-list { display:grid; gap:7px; max-height:280px; overflow-y:auto; }
+.add-friend-row { display:flex; align-items:center; gap:10px; padding:9px; border:1px solid #eee; border-radius:11px; }
+.add-friend-row img { width:38px; height:38px; border-radius:50%; object-fit:cover; }
+.add-friend-row > div { flex:1; min-width:0; }
+.add-friend-row b,.add-friend-row span { display:block; }
+.add-friend-row span { color:#888; font-size:10px; margin-top:2px; }
+.add-friend-row button { width:auto; padding:7px 12px; }
+.friend-status { color:#4b855a !important; background:#e8f6ec; border-radius:999px; padding:6px 8px; white-space:nowrap; }
+.empty-friends { background:#fff; border:1px dashed var(--line); border-radius:14px; padding:28px; text-align:center; display:flex; flex-direction:column; gap:5px; color:#888; }
+.empty-friends b { color:#444; }
+
+/* FRIEND PROFILE MODAL: keep the page visible behind a real viewport overlay */
+.friend-profile-backdrop { position:fixed !important; inset:0 !important; width:100vw; height:100vh; box-sizing:border-box; z-index:9999; background:rgba(25,25,25,.48) !important; display:flex !important; align-items:center !important; justify-content:center !important; padding:20px !important; overflow:hidden !important; }
+.friend-profile { width:min(620px, calc(100vw - 40px)); max-height:calc(100vh - 40px); box-sizing:border-box; overflow-y:auto; background:#fff; border-radius:20px; padding:22px; box-shadow:0 20px 60px rgba(0,0,0,.28); }
+@media (max-width:600px) { .friends-toolbar { align-items:flex-start; } .add-friend-button { padding:9px 11px; } .friend-profile-backdrop { padding:10px !important; } .friend-profile { width:calc(100vw - 20px); max-height:calc(100vh - 20px); padding:16px; border-radius:16px; } }
+
+/* Friend requests */
+.friend-requests-panel{margin:0 0 20px;background:#fff;border:1px solid #e7eaf0;border-radius:18px;padding:16px;box-shadow:0 8px 24px rgba(20,30,50,.06)}
+.friend-request-list{display:grid;gap:10px}
+.friend-request-row{display:flex;align-items:center;gap:12px;padding:12px;border-radius:14px;background:#f7f8fa}
+.friend-request-row img{width:44px;height:44px;border-radius:50%;object-fit:cover}
+.friend-request-row>div{flex:1;min-width:0;display:flex;flex-direction:column;gap:3px}
+.friend-request-row>div b{font-size:14px}
+.friend-request-row>div span{font-size:12px;color:#7b8492}
+.friend-request-row button{min-width:82px}
+.friend-status.pending{color:#8a6a00;background:#fff6d8;border-radius:999px;padding:7px 10px;font-size:12px;font-weight:700}
+@media(max-width:600px){.friend-request-row{flex-wrap:wrap}.friend-request-row>div{min-width:130px}.friend-request-row button{flex:1}}
