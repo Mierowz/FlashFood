@@ -1,7 +1,7 @@
 {
   "name": "flashfood",
   "private": true,
-  "version": "1.0.0",
+  "version": "1.0.1",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -24,19 +24,23 @@
     "@vitejs/plugin-react": "latest",
     "electron": "^43.7.9",
     "electron-builder": "latest",
+    "png-to-ico": "^3.0.2",
     "vite": "latest"
   },
   "main": "electron.cjs",
   "build": {
     "appId": "com.flashfood.demo",
     "productName": "FlashFood",
+    "icon": "build/icon.png",
     "asar": true,
     "files": [
       "dist/**/*",
       "electron.cjs",
       "package.json"
+      
     ],
     "mac": {
+      "icon": "build/icon.icns",
       "target": [
         {
           "target": "pkg",
@@ -51,6 +55,7 @@
       "minimumSystemVersion": "12.0"
     },
     "win": {
+      "icon": "build/icon.ico",
       "target": [
         {
           "target": "nsis",
