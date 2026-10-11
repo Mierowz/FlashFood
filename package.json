@@ -8,12 +8,12 @@
     "build": "vite build",
     "preview": "vite preview",
     "electron": "npm run build && electron .",
-    "dist:mac": "npm run build && electron-builder --mac pkg --publish never",
+    "dist:mac": "npm run build && electron-builder --mac dmg --publish never",
     "dist:win": "npm run build && electron-builder --win nsis --publish never",
-    "dist:all": "npm run build && electron-builder --mac pkg --win nsis --publish never",
-    "dist:mac:x64": "npm run build && electron-builder --mac pkg --x64 --publish never",
-    "dist:mac:arm64": "npm run build && electron-builder --mac pkg --arm64 --publish never",
-    "dist:mac:universal": "npm run build && electron-builder --mac pkg --universal --publish never"
+    "dist:all": "npm run build && electron-builder --mac dmg --win nsis --publish never",
+    "dist:mac:x64": "npm run build && electron-builder --mac dmg --x64 --publish never",
+    "dist:mac:arm64": "npm run build && electron-builder --mac dmg --arm64 --publish never",
+    "dist:mac:universal": "npm run build && electron-builder --mac dmg --universal --publish never"
   },
   "dependencies": {
     "react": "latest",
@@ -68,5 +68,16 @@
     "directories": {
       "output": "release"
     }
+  },
+  "mac": {
+    "target": [
+      {
+        "target": "dmg",
+        "arch": [
+          "arm64",
+          "x64"
+        ]
+      }
+    ]
   }
 }
