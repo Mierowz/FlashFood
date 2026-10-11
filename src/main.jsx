@@ -24,7 +24,7 @@ const assetUrl = (file) => {
   const value = String(file).trim().replace(/\\/g, '/');
   if (/^(https?:|data:|blob:)/i.test(value)) return value;
   const clean = value.replace(/^\/+/, '').replace(/^public\//i, '');
-  return clean.startsWith('assets/') ? `/${clean}` : `/assets/${clean}`;
+  return clean.startsWith('assets/') ? `./${clean}` : `./assets/${clean}`;
 };
 const STORE_KEY='flashfood-demo-store-v5';
 const HISTORY_RESET_KEY='flashfood-history-reset-v1';

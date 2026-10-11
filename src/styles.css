@@ -3107,74 +3107,20 @@ img {
 
 /* ========================================================================== */
 /* UNIFIED APP SHELL & BOTTOM NAVIGATION */
-/* Keep the bottom navigation visually connected to the main website shell. */
-/* ========================================================================== */
-.bottom {
-    left: 50%;
-    right: auto;
-    width: min(100%, 1040px);
-    transform: translateX(-50%);
-    padding: 0;
-    background: var(--orange);
-    border-radius: 0;
-}
-
-.bottom button.active {
-    background: transparent;
-}
-
-/* ========================================================================== */
-/* FULL-WIDTH DESKTOP APP LAYOUT */
-/* Keep the whole FlashFood UI centered, but make the actual website wider. */
-@media (min-width: 900px) {
-    .app-shell {
-        max-width: 1200px;
-        width: 100%;
-    }
-
-    .main {
-        padding: 0 48px;
-    }
-
-    .screen {
-        max-width: 1000px;
-        width: 100%;
-        padding-left: 28px;
-        padding-right: 28px;
-    }
-
-    .bottom {
-        width: min(100%, 1200px);
-        left: 50%;
-        right: auto;
-        transform: translateX(-50%);
-        padding: 0;
-    }
-
-    .bottom-inner {
-        width: 100%;
-        max-width: none;
-        gap: 0;
-    }
-
-    .bottom-inner button {
-        flex: 1 1 0;
-        max-width: none;
-        width: auto;
-    }
-}
-
-/* FINAL BOTTOM NAV ALIGNMENT FIX */
 @media (min-width: 900px) {
   .bottom {
-    left: 50%;
-    right: auto;
-    width: min(1200px, 100vw);
-    max-width: 100vw;
-    transform: translateX(-50%);
-    padding: 0;
-    margin: 0;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    max-width: none;
     box-sizing: border-box;
+    transform: none;
+    margin: 0;
+    padding: 0;
+    border-radius: 0;
+    animation: none;
   }
 
   .bottom-inner {
@@ -3184,38 +3130,17 @@ img {
     gap: 0;
     box-sizing: border-box;
   }
-}
-
-/* FINAL FIX: center the full-width bottom navigation without letting the
-   entrance animation override its horizontal transform. */
-@media (min-width: 900px) {
-  .bottom {
-    left: 50% !important;
-    right: auto !important;
-    width: min(1200px, 100vw) !important;
-    max-width: 100vw !important;
-    transform: translateX(-50%) !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    animation: none !important;
-  }
-
-  .bottom-inner {
-    width: 100% !important;
-    max-width: none !important;
-    margin: 0 !important;
-    gap: 0 !important;
-  }
 
   .bottom-inner button {
-    flex: 1 1 0 !important;
-    max-width: none !important;
-    width: auto !important;
+    flex: 1 1 0;
+    width: auto;
+    max-width: none;
+    min-width: 0;
   }
 }
 
-/* ========================================================================== */
 /* NEW FEATURES: NUTRITION, FRIEND PROFILES, HORIZONTAL HOME FOOD ROWS */
+
 /* ========================================================================== */
 .food-row {
     display: flex;
