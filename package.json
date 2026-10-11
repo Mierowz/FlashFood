@@ -16,15 +16,15 @@
     "dist:mac:universal": "npm run build && electron-builder --mac pkg --universal --publish never"
   },
   "dependencies": {
-    "vite": "latest",
     "react": "latest",
-    "react-dom": "latest"
+    "react-dom": "latest",
+    "vite": "latest"
   },
   "devDependencies": {
     "@vitejs/plugin-react": "latest",
-    "vite": "latest",
-    "electron": "latest",
-    "electron-builder": "latest"
+    "electron": "^43.7.9",
+    "electron-builder": "latest",
+    "vite": "latest"
   },
   "main": "electron.cjs",
   "build": {
