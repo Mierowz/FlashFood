@@ -1,0 +1,64 @@
+{
+  "name": "flashfood",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "electron": "npm run build && electron .",
+    "dist:mac": "npm run build && electron-builder --mac pkg",
+    "dist:win": "npm run build && electron-builder --win nsis",
+    "dist:all": "npm run build && electron-builder --mac pkg --win nsis"
+  },
+  "dependencies": {
+    "vite": "latest",
+    "react": "latest",
+    "react-dom": "latest"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "latest",
+    "vite": "latest",
+    "electron": "latest",
+    "electron-builder": "latest"
+  },
+  "main": "electron.cjs",
+  "build": {
+    "appId": "com.flashfood.demo",
+    "productName": "FlashFood",
+    "asar": true,
+    "files": [
+      "dist/**/*",
+      "electron.cjs",
+      "package.json"
+    ],
+    "mac": {
+      "target": [
+        {
+          "target": "pkg",
+          "arch": [
+            "arm64",
+            "x64"
+          ]
+        }
+      ],
+      "category": "public.app-category.education",
+      "artifactName": "FlashFood-${version}-${arch}.${ext}"
+    },
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64"
+          ]
+        }
+      ],
+      "artifactName": "FlashFood-Setup-${version}.${ext}"
+    },
+    "directories": {
+      "output": "release"
+    }
+  }
+}
