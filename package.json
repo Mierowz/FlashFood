@@ -8,9 +8,9 @@
     "build": "vite build",
     "preview": "vite preview",
     "electron": "npm run build && electron .",
-    "dist:mac": "npm run build && electron-builder --mac pkg",
-    "dist:win": "npm run build && electron-builder --win nsis",
-    "dist:all": "npm run build && electron-builder --mac pkg --win nsis"
+    "dist:mac": "npm run build && electron-builder --mac pkg --publish never",
+    "dist:win": "npm run build && electron-builder --win nsis --publish never",
+    "dist:all": "npm run build && electron-builder --mac pkg --win nsis --publish never"
   },
   "dependencies": {
     "vite": "latest",
