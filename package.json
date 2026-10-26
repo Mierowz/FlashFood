@@ -1,7 +1,7 @@
 {
   "name": "flashfood",
   "private": true,
-  "version": "1.0.3",
+  "version": "1.0.4",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -42,15 +42,14 @@
       "icon": "build/icon.icns",
       "target": [
         {
-          "target": "pkg",
+          "target": "dmg",
           "arch": [
-            "arm64",
-            "x64"
+            "universal"
           ]
         }
       ],
       "category": "public.app-category.education",
-      "artifactName": "FlashFood-${version}-${arch}.${ext}",
+      "artifactName": "FlashFood-${version}-macOS.${ext}",
       "minimumSystemVersion": "12.0"
     },
     "win": {
@@ -68,16 +67,5 @@
     "directories": {
       "output": "release"
     }
-  },
-  "mac": {
-    "target": [
-      {
-        "target": "dmg",
-        "arch": [
-          "arm64",
-          "x64"
-        ]
-      }
-    ]
   }
 }

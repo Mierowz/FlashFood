@@ -28,7 +28,7 @@ jobs:
           if-no-files-found: error
 
   build-macos:
-    name: Build Mac installers
+    name: Build macOS installer
     runs-on: macos-latest
     steps:
       - uses: actions/checkout@v4
@@ -37,29 +37,11 @@ jobs:
           node-version: 22
           cache: npm
       - run: npm ci
-
-      - name: Build Intel Mac installer
-        run: |
-          mkdir -p release-assets
-          npm run dist:mac:x64
-          mv release/*.pkg release-assets/FlashFood-Intel.pkg
-
-      - name: Build Apple Silicon installer
-        run: |
-          rm -rf release
-          npm run dist:mac:arm64
-          mv release/*.pkg release-assets/FlashFood-Apple-Silicon.pkg
-
-      - name: Build Universal Mac installer
-        run: |
-          rm -rf release
-          npm run dist:mac:universal
-          mv release/*.pkg release-assets/FlashFood-Universal.pkg
-
+      - run: npm run dist:mac:universal
       - uses: actions/upload-artifact@v4
         with:
           name: FlashFood-macOS
-          path: release-assets/*.pkg
+          path: release/*.dmg
           if-no-files-found: error
 
   publish-release:
