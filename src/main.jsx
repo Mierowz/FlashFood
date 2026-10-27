@@ -12,14 +12,14 @@ const EXTRA_FOODS=[
   {id:'carbonara',name:'Carbonara',price:70,img:'carbonara.jpeg',tag:'Creamy pasta',allergens:['Gluten','Dairy','Eggs'],canteen:'Main Canteen'},
   {id:'hotdog',name:'Hotdog Sandwich',price:45,img:'hotdog.jpeg',tag:'Quick bite',allergens:['Gluten'],canteen:'Main Canteen'},
   {id:'siopao',name:'Siopao',price:30,img:'siopao.jpeg',tag:'Steamed bun',allergens:['Gluten','Pork'],canteen:'Small Canteen'},
-  {id:'fishballs',name:'Fish Balls',price:25,img:'fishballs.jpeg',tag:'Street-food favorite',allergens:['Finfish'],canteen:'Small Canteen'},
+  {id:'fishballs',name:'Fish Balls',price:25,img:'fishball.jpeg',tag:'Street-food favorite',allergens:['Finfish'],canteen:'Small Canteen'},
   {id:'bananacue',name:'Bananacue',price:25,img:'bananacue.jpeg',tag:'Caramelized banana snack',allergens:[],canteen:'Small Canteen'},
   {id:'pancakes',name:'Pancakes',price:40,img:'pancakes.jpeg',tag:'Sweet breakfast',allergens:['Gluten','Dairy','Eggs'],canteen:'Small Canteen'},
   {id:'nachos',name:'Nachos',price:50,img:'nachos.jpeg',tag:'Cheesy snack',allergens:['Gluten','Dairy'],canteen:'Small Canteen'}
 ];
 const ALL_FOODS=[...FOODS,...EXTRA_FOODS];
 
-const A='/assets/';
+const A = `${import.meta.env.BASE_URL}assets/`;
 const STORE_KEY='flashfood-demo-store-v5';
 const HISTORY_RESET_KEY='flashfood-history-reset-v1';
 const STOCK_KEY='flashfood-demo-stock-v1';
